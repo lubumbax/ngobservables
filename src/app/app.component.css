@@ -1,0 +1,19 @@
+table {
+    padding: 2px;
+}
+
+th, td {
+    padding: 6px;
+}
+
+th.th-comp-title {
+    background-color: lightgrey;
+    font-weight: bold;
+    text-align: left;
+}
+
+td.td-component {
+    background-color: whitesmoke;
+    text-align: left;
+    padding-bottom: 1em;
+}

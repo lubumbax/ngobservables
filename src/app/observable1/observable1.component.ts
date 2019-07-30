@@ -3,14 +3,12 @@ import {Observable} from 'rxjs/Observable';
 import { noop, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-observable1',
-  //templateUrl: './observable1.component.html',
-  //styleUrls: ['./observable1.component.css']
+  selector: 'observable1',
   template: `
   <b>Angular Component Using Observables! </b>
-  <button style="margin-top: 2rem;" (click)="launch()">Launch</button>
-  <button style="margin-top: 2rem;" (click)="alternate()">Alternate</button>
-  <button style="margin-top: 2rem;" (click)="stop()">Stop</button>
+  <button (click)="launch()">Launch</button>
+  <button (click)="alternate()">Alternate</button>
+  <button (click)="stop()">Stop</button>
 
   <div>VALUES:   <span *ngFor="let value of values">{{ value }} </span></div>
   <div>ERRORs:   <span>{{ errors }}</span></div>
