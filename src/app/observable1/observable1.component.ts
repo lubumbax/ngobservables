@@ -5,7 +5,7 @@ import { noop, Subscription } from 'rxjs';
 @Component({
   selector: 'observable1',
   template: `
-  <b>Angular Component Using Observables! </b>
+  Angular component using observables: 
   <button (click)="launch()">Launch</button>
   <button (click)="alternate()">Alternate</button>
   <button (click)="stop()">Stop</button>
@@ -21,7 +21,6 @@ export class Observable1Component {
   private finished: boolean;
 
   private observable: Observable<number>;
-
   private subscription: Subscription;
 
   constructor() {
@@ -29,9 +28,9 @@ export class Observable1Component {
       let timeouts = [];
       timeouts.push(setTimeout( () => {observer.next(42);},   1000 ));  // 
       timeouts.push(setTimeout( () => {observer.next(43);},   2000 ));
-      timeouts.push(setTimeout( () => {Math.round(Math.random())?observer.error(new Error("Can't take this BS")):noop}, 1500 ));
       timeouts.push(setTimeout( () => {observer.complete();}, 3000 ));
-
+      timeouts.push(setTimeout( () => {Math.round(Math.random())?observer.error(new Error("Can't take this BS")):noop}, 1500 ));
+      
       return () => { 
         for (let timeout of timeouts) {
           console.log("Removing timeout: " + timeout);
@@ -46,7 +45,6 @@ export class Observable1Component {
     this.errors = null
     this.finished = false
 
-    //let subscription = this.observable.subscribe(
     this.subscription = this.observable.subscribe(
         val => this.values.push(val),
         err => this.errors = err,
