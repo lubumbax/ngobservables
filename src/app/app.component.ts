@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '\"Angular Observables\"';
+
+  onOpen(event: any) { console.log("Opening: " + event)}
+  onClose(event: any) { console.log("Closing: " + event)}
 }

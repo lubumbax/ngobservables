@@ -9,6 +9,7 @@ import { HttpObservableComponent } from './http-observable/http-observable.compo
 import { FormObservableComponent } from './form-observable/form-observable.component';
 import { HotObservableComponent } from './hot-observable/hot-observable.component';
 import { AsyncPipesComponent } from './async-pipes/async-pipes.component';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AsyncPipesComponent } from './async-pipes/async-pipes.component';
     HttpObservableComponent,
     FormObservableComponent,
     HotObservableComponent,
-    AsyncPipesComponent
+    AsyncPipesComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,
