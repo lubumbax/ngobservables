@@ -17,7 +17,6 @@ export class FormObservableComponent {
 
   constructor(private fb: FormBuilder) { 
     this.text = new FormControl();
-
     this.form = fb.group({
       text: this.text
     });
