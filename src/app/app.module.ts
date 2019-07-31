@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { Observable1Component } from './observable1/observable1.component';
 import { HttpObservableComponent } from './http-observable/http-observable.component';
 import { FormObservableComponent } from './form-observable/form-observable.component';
+import { HotObservableComponent } from './hot-observable/hot-observable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Observable1Component,
     HttpObservableComponent,
-    FormObservableComponent
+    FormObservableComponent,
+    HotObservableComponent
   ],
   imports: [
     BrowserModule,
